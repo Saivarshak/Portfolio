@@ -1,0 +1,106 @@
+/* Fonts */
+* {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Background Effects */
+.bg-violet-blur {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(139, 92, 246, 0.2);
+  border-radius: 9999px;
+  filter: blur(48px);
+}
+.bg-fuchsia-blur {
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(232, 121, 249, 0.2);
+  border-radius: 9999px;
+  filter: blur(48px);
+}
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 9999px;
+  color: rgba(192, 132, 252, 1);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+.badge .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #34d399;
+  border-radius: 9999px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Feature Cards */
+.feature-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.feature-card:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+.feature-card .icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(139, 92, 246, 0.1);
+  color: rgba(139, 92, 246, 1);
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.feature-card:hover .icon {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+/* CTA Section */
+.cta {
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(to right, rgba(139,92,246,0.1), rgba(232,121,249,0.1), rgba(236,72,153,0.1));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 1.5rem;
+  border-top: 1px solid rgba(71, 85, 105, 0.5);
+}
