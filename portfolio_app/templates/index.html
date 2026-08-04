@@ -1,4 +1,3 @@
-{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,25 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      * { font-family: 'Inter', system-ui, sans-serif; }
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-      .animate-float { animation: float 6s ease-in-out infinite; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
   </head>
   <body class="min-h-screen bg-slate-950 text-white antialiased">
     <!-- Profile Image -->
-<!-- Hero / About Me Section -->
+<!-- Hero / About Me Section -->   
 <section id="about" class="pt-32 pb-20 px-6">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
     
     <!-- Profile Image -->
     <div class="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-4 border-violet-500/30 shadow-lg shadow-violet-500/20 animate-float">
       <img 
-        src="{% static 'images/profile.jpg' %}" 
+        src="profile.jpg" 
         alt="Profile Image"
         class="w-full h-full object-cover rounded-full"
       >
@@ -42,8 +35,10 @@
           Varshak Pilla
         </span>
       </h1>
+      <p>Contact Me : 8247624897</p>
+      <br>
       <p class="text-lg md:text-xl text-slate-400 mb-6 leading-relaxed">
-        Full Stack Developer passionate about turning ideas into fast, accessible, and beautifully designed web applications.
+        AI Full Stack Developer (Python | Django | Ai Integration) passionate about turning ideas into fast, accessible, and beautifully designed web applications.
       </p>
       <div class="flex flex-col sm:flex-row items-center md:items-start gap-4 mb-4">
         <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-violet-500/25">
@@ -58,7 +53,12 @@
 
   </div>
 </section>
-
+<div class="flex justify-center mt-8">
+  <a href="Varshak_Pilla_Resume.pdf" download
+     class="inline-block px-6 py-3 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700">
+    📄 Download Resume
+  </a>
+</div>
 
   <!-- Skills Section -->
 <section id="skills" class="py-20 px-6">
@@ -103,7 +103,7 @@
       <div class="text-violet-400 text-3xl mb-4">🔗</div>
       <h3 class="text-xl font-semibold mb-2">APIs</h3>
       <p class="text-slate-400">
-        REST, JSON, Authentication
+        REST, JSON, Authentication (Basics)
       </p>
     </div>
 
@@ -119,7 +119,7 @@
     <!-- Workflow -->
     <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-pink-500/30 transition-all">
       <div class="text-pink-400 text-3xl mb-4">⚙️</div>
-      <h3 class="text-xl font-semibold mb-2">Workflow</h3>
+      <h3 class="text-xl font-semibold mb-2">AI Workflow</h3>
       <p class="text-slate-400">
         Debugging, Testing, Clean Code
       </p>
@@ -151,7 +151,7 @@
       </div>
 
       <div>
-        <p class="text-4xl font-bold text-amber-400 mb-2">2025</p>
+        <p class="text-4xl font-bold text-amber-400 mb-2">2025 With 72.0%</p>
         <p class="text-slate-500">Diploma CSE Graduate</p>
       </div>
 
@@ -172,16 +172,16 @@
   <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
     <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 flex flex-col items-center">
-      <img src="{% static 'images/ecommerce.png' %}" alt="E-Commerce Web App" class="mb-4 w-full h-48 object-cover rounded-xl">
+      <img src="ecommerce.png" alt="E-Commerce Web App" class="mb-4 w-full h-48 object-cover rounded-xl">
       <h3 class="text-xl font-semibold mb-2">🛒 E-Commerce Web App</h3>
       <p class="text-slate-400 mb-4 text-center">
-        Full-stack shopping platform with login using Python Django & MySQL .
+        Full-stack shopping platform with login, using Django & MySQL.
       </p>
       <p class="text-sm text-slate-500">💡 Tech: HTML, CSS, JS, Python, Django, MySQL</p>
     </div>
 
     <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 flex flex-col items-center">
-      <img src="{% static 'images/jobhub.png' %}" alt="Job Hub" class="mb-4 w-full h-48 object-cover rounded-xl">
+      <img src="jobhub.png" alt="Job Hub" class="mb-4 w-full h-48 object-cover rounded-xl">
       <h3 class="text-xl font-semibold mb-2">💼 Job Hub</h3>
       <p class="text-slate-400 mb-4 text-center">
         Responsive job listing website with filters and clean UI using HTML, CSS, Bootstrap.
@@ -190,7 +190,7 @@
     </div>
 
     <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 flex flex-col items-center">
-      <img src="{% static 'images/gaming.png' %}" alt="Online Gaming Platform" class="mb-4 w-full h-48 object-cover rounded-xl">
+      <img src="gaming.png" alt="Online Gaming Platform" class="mb-4 w-full h-48 object-cover rounded-xl">
       <h3 class="text-xl font-semibold mb-2">🎮 Online Gaming Platform</h3>
       <p class="text-slate-400 mb-4 text-center">
         Mobile-friendly gaming site with interactive UI as part of frontend certification.
@@ -199,12 +199,12 @@
     </div>
 
     <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 flex flex-col items-center">
-      <img src="{% static 'images/resumebuilder.png' %}" alt="Resume Builder" class="mb-4 w-full h-48 object-cover rounded-xl">
+      <img src="resumebuilder.png" alt="Resume Builder" class="mb-4 w-full h-48 object-cover rounded-xl">
       <h3 class="text-xl font-semibold mb-2">📄 Resume Builder</h3>
       <p class="text-slate-400 mb-4 text-center">
-        Django app to create, edit, and download resumes dynamically.
+        Django app to create, edit, and download resumes.
       </p>
-      <p class="text-sm text-slate-500">💡 Tech: Html ,Css ,js ,Python , Django</p>
+      <p class="text-sm text-slate-500">💡 Tech: Html, Css ,Js Python, Django</p>
     </div>
 
   </div>
@@ -222,7 +222,6 @@
 
     <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-violet-500/30 transition-all">
       <h3 class="text-lg font-semibold mb-2">🎓 Python Programming Foundation</h3>
-      <p class="text-slate-400">February 2025</p>
     </div>
 
     <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-fuchsia-500/30 transition-all">
@@ -256,7 +255,7 @@
     <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-violet-500/30 transition-all">
       <h3 class="text-xl font-semibold mb-2">🎓 Diploma in Computer Science Engineering</h3>
       <p class="text-slate-300 mb-1">Kakinada Institute of Engineering & Technology</p>
-      <p class="text-slate-500">2022 – 2025 | 68.40%</p>
+      <p class="text-slate-500">2022 – 2025 | 72.0%</p>
     </div>
 
     <!-- Experience Box -->
